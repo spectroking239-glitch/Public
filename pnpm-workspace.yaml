@@ -1,0 +1,19 @@
+# ============================================================================
+# SECURITY: Minimum release age for npm packages (supply-chain attack defense)
+# ============================================================================
+# Requires npm packages to be published for at least 1 day before install.
+# Defense against supply-chain attacks. DO NOT DISABLE.
+# ============================================================================
+minimumReleaseAge: 1440
+
+minimumReleaseAgeExclude:
+  - '@replit/*'
+
+packages:
+  - services/*
+  - artifacts/*
+
+onlyBuiltDependencies:
+  - better-sqlite3
+  - sqlite3
+  - '@napi-rs/canvas'
